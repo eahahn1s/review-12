@@ -33,7 +33,7 @@ function findKeyWords() {
    var articleElement = document.getElementById("doc");
    var h2 = document.getElementsByTagName("h1")[0];
 
-   var asideElement = document.getElementById("aside");
+   var asideElement = document.createElement("aside");
    asideElement.setAttribute("id", "keywords");
 
 var h1Element = document.createElement("h1");
@@ -47,17 +47,17 @@ var h1Text = document.createTextNode("Keyword List");
  var orderedListElement = document.createElement("ol");
   asideElement.appendChild(orderedListElement);
 
- var keyWordElems = document.querySelectorAll("dfn");
+ var keywordElems = document.querySelectorAll("dfn");
   var keyWords = [];
 
-for (var i = 0; i < keyWordElems.length; i++) {
-    keyWords.push(keyWordElems[i].textContent);
+for (var i = 0; i < keywordElems.length; i++) {
+    keyWords.push(keywordElems[i].textContent);
  }
 
 keyWords.sort();
 
-keyWordElems.forEach((elem) => {
-    elem.setAttribute("id", "keyword_" + replaceWS(elem.textContent));
+keywordElems.forEach((elem) => {
+    elem.setAttribute("id", "keyboard_" + replaceWS(elem.textContent));
   });
 
 for (var i = 0; i < keyWords.length; i++) {
