@@ -34,7 +34,7 @@ function findKeyWords() {
    var h2 = document.getElementsByTagName("h1")[0];
 
    var asideElement = document.createElement("aside");
-   asideElement.setAttribute("id", "keywords");
+   asideElement.setAttribute("id", "keywords")
 
 var h1Element = document.createElement("h1");
 var h1Text = document.createTextNode("Keyword List");
